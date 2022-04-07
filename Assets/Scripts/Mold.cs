@@ -37,7 +37,8 @@ public class Mold : MonoBehaviour
 		hungerStamina.Value = 100;
 		//hygieneStamina.Value = 100;
 		loveStamina.Value = 100;
-		StartCoroutine(HungerBuildingUpCoroutine(3f));
+		StartCoroutine(StaminaLoweringCoroutine(hungerStamina, 3f));
+		StartCoroutine(StaminaLoweringCoroutine(loveStamina, 3f));
 	}
 
 	// Update is called once per frame
@@ -48,6 +49,7 @@ public class Mold : MonoBehaviour
 
 	void OnGetPatted()
 	{
+		loveStamina.Value += 15;
 		pictureScript.OnGetPattedForSeconds(1);
 		particles.Clear();
 		particles.Play();
@@ -143,12 +145,12 @@ public class Mold : MonoBehaviour
 		OnEat(food);
 	}
 
-	IEnumerator HungerBuildingUpCoroutine(float percentAddingPeriodInSeconds)
+	IEnumerator StaminaLoweringCoroutine(Stamina stamina,float percentAddingPeriodInSeconds)
 	{
 		while (true)
 		{
 			yield return new WaitForSeconds(percentAddingPeriodInSeconds);
-			hungerStamina.Value--;
+			stamina.Value--;
 		}
 	}
 	IEnumerator PolluteLaterByValue(float seconds, float value)

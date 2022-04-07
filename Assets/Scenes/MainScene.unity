@@ -520,6 +520,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.7210547
       objectReference: {fileID: 0}
+    - target: {fileID: 9170610957144949538, guid: 0a9d5706b47519c479a96efcb336e04e, type: 3}
+      propertyPath: _value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a9d5706b47519c479a96efcb336e04e, type: 3}
 --- !u!1 &1221096818
@@ -579,7 +583,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 72da6f692fc69a142b89fec8ce062e47, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4b12295fb5666a94cbd779e8da500828, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
